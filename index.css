@@ -36,7 +36,7 @@
   
   /* Current/active navbar link */
   .active {
-    background-color: #04AA6D;
+    background-color: #0f519c;
   }
   
   /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
