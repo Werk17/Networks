@@ -5,21 +5,52 @@
   <link rel="stylesheet" href="index.css">
   <script src="https://d3js.org/d3.v4.min.js"></script>
 </header>
+<title>
+  Network Analysis
+</title>
 
 <body>
+
 
   <div class="navbar">
     <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
     <a href="https://github.com/Werk17/Networks"><i class="fa fa-fw fa-search"></i> Github </a>
-    <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-    <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
   </div>
-  
+
+  <div class="hypothesis">
+    <h1>Claim: 
+      <i>
+        Nodes with the highest edge count are always in the center of an undirected graph and
+        and will always be the main factor.
+      </i>
+    </h1>
+  </div>
 
 
-<svg width="960" height="600"></svg>
+  <svg width="960" height="600"></svg>
+
+  <h3>Top Nodes sorted by number of edges</h3>
+  <img src="/Photos/Screenshot 2022-11-09 021542.png" alt="list data" style="width: 75%; margin-left: 50px">
+
+  <div class="images">
+    <h3>Undirected Graph - Word adjacency</h3>
+    <p>Visualized in Gephi: <br>
+    <i>Data from adjacency network of common adjectives and nouns in the novel <br> David Copperfield by Charles Dickens. M. E. J. Newman, Phys. Rev. E 74, 036104 (2006).</i> </p>
+    <img src="/Photos/wordAdjacency.png" alt="Football graph">
+
+    <h3>Directed Graph - College Football</h3>
+    <p>Visualized in Gephi: <br>
+      <i>Data from: network of American football games between Division IA colleges during regular season Fall 2000. M. Girvan and M. E. J. Newman, Proc. Natl. Acad. Sci. USA 99, 7821-7826 (2002).</i> </p>
+    <img src="/Photos/footballNetwork.png" alt="Football graph">
+
+  </div>
+
+
+
 
   <script>
+    // script for this svg is from HeyBigNick's github where he added labels to an original d3
+    // observable
 
     var svg = d3.select("svg"),
       width = +svg.attr("width"),
@@ -30,7 +61,7 @@
     var simulation = d3.forceSimulation()
       .force("link", d3.forceLink().id(function (d) { return d.id; }))
       .force("charge", d3.forceManyBody())
-      .force("center", d3.forceCenter(width / 2, height / 2));
+      .force("center", d3.forceCenter(width / 3, height / 2));
     // take in the network file 
     d3.json("miserables.json", function (error, graph) {
       if (error) throw error;

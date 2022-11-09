@@ -1,3 +1,36 @@
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+svg {
+  background-color: rgb(240, 240, 240);
+  margin-left: 2%;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+div.hypothesis {
+  padding: 10px;
+  background-color: #fff;
+}
+
+div.images {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  position: relative;
+}
+
+img {
+  width: 500px;
+  display: inline;
+  margin-left: 50px;
+  position: relative;
+}
+
+
 .links line {
     stroke: #999;
     stroke-opacity: 0.6;
