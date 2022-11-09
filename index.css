@@ -15,12 +15,18 @@ div.hypothesis {
   padding: 10px;
   background-color: #fff;
 }
+div.datatable {
+  margin: 15px 20px;
+  position: relative;
+
+}
 
 div.images {
-  margin-left: 10px;
+  margin-left: 60px;
   margin-right: 10px;
-  margin-top: 20px;
-  position: relative;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  position: absolute;
 }
 
 img {
