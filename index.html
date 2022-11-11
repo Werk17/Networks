@@ -27,12 +27,9 @@
   </div>
 
 
-  <svg width="960" height="600"></svg>
+  <svg width="960" height="700"></svg>
 
-  <div class="datatable">
-    <h3>Top Nodes sorted by number of edges</h3>
-    <img src="Screenshot 2022-11-09 021542.png" alt="list data" style="width: 75%; margin-left: 50px">
-  </div>
+  
 
   <div class="images">
     <h3>Undirected Graph - Word adjacency</h3>
@@ -40,7 +37,12 @@
       <i>Data from adjacency network of common adjectives and nouns in the novel <br> David Copperfield by Charles
         Dickens. M. E. J. Newman, Phys. Rev. E 74, 036104 (2006).</i>
     </p>
-    <img src="wordAdjacency.png" alt="Football graph">
+    <img src="wordAdjacency.png" alt="word adjacency graph">
+    
+    <div class="datatable">
+      <h3>Top Nodes sorted by number of edges</h3>
+      <img src="Screenshot 2022-11-09 021542.png" alt="list data" style="width: 700px; margin-left: 50px">
+    </div>
 
     <h3>Directed Graph - College Football</h3>
     <p>Visualized in Gephi: <br>
@@ -67,7 +69,7 @@
     var simulation = d3.forceSimulation()
       .force("link", d3.forceLink().id(function (d) { return d.id; }))
       .force("charge", d3.forceManyBody())
-      .force("center", d3.forceCenter(width / 3, height / 2));
+      .force("center", d3.forceCenter(width / 2, height / 2));
     // take in the network file 
     d3.json("miserables.json", function (error, graph) {
       if (error) throw error;

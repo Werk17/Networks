@@ -24,13 +24,13 @@ div.datatable {
 div.images {
   margin-left: 60px;
   margin-right: 10px;
-  margin-top: 200px;
+  margin-top: 20px;
   margin-bottom: 50px;
   position: absolute;
 }
 
 img {
-  width: 500px;
+  width: 700px;
   display: inline;
   margin-left: 50px;
   position: relative;
